@@ -1,0 +1,3229 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#"
+     xml:base="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:traceOntology1="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#HasChange -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#HasChange">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowChange"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#HasNextCommand -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#HasNextCommand">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#isSourceOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Trace"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Source"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceFunctionalRequirementAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceFunctionalRequirementAction">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenActionAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceFunctionalRequirementActionSendData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceFunctionalRequirementActionSendData">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceFunctionalRequirementAction"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenSendDataAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SendData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceFunctionalRequirementBaseInterface -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceFunctionalRequirementBaseInterface">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenBaseInterfaceAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#BaseInterface"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceFunctionalRequirementValidateValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceFunctionalRequirementValidateValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenValidateValueAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ValidateValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementAdd -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementAdd">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Add"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementAddButton -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementAddButton">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementAdd"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddButtonAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AddButton"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementAddInput -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementAddInput">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementAdd"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddInputAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AddInput"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementAddText -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementAddText">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementAdd"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddTextAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AddText"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheck -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheck">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckText"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFont"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheckElemenPosition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheckElemenPosition">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheck"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckElementPositionAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElementPosition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheckElementColor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheckElementColor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheck"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckElementColorAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElementColor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheckElementSize -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheckElementSize">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheck"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElementSize"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheckElementStyle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheckElementStyle">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheck"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckElementStyleAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElementStyle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheckPerformance -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheckPerformance">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckPerformanceAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckPerformance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheckTextFontSize -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheckTextFontSize">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheck"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFontSize"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheckTextFontStyle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheckTextFontStyle">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheck"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFontStyle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheckTextFontWeight -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheckTextFontWeight">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheck"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFontWeight"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheckTextFormat -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheckTextFormat">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementCheck"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckTextFormat"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFormat"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementRemove -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementRemove">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenRemoveAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Remove"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementRemoveButton -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementRemoveButton">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementRemove"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenRemoveButtonAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#RemoveButton"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementRemoveText -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementRemoveText">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceNonFunctionalRequirementRemove"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenRemoveTextAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#RemoveText"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#isTargetOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Trace"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetAssertCommand -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetAssertCommand">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckAndTestScenario"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenValidateValueAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Assert"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetAssertNotCommand -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetAssertNotCommand">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenRemoveAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertNot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetBorderRadiusNotRelevantChange -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetBorderRadiusNotRelevantChange">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckElementStyleAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChangeOfDifferentBorderRadius"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetClickCommand -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetClickCommand">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenActionAndTestScenario"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetColorNotRelevantChange -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetColorNotRelevantChange">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckElementColorAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChangeOfDifferentColor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetElementPossitionRelevantChange -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetElementPossitionRelevantChange">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddAndTestScenario"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddButtonAndTestScenario"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddTextAndTestScenario"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckElementPositionAndTestScenario"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenRemoveAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfElementPossition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetExecuteCommand -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetExecuteCommand">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Execute"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetFontSizeRelevantChange -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetFontSizeRelevantChange">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfFontSize"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetFontStyleRelevantChange -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetFontStyleRelevantChange">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfFontStyle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetFontWeightRelevantChange -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetFontWeightRelevantChange">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfFontWeight"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetMouseCommand -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetMouseCommand">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddAndTestScenario"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenSendDataAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Mouse"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetMovedBlankedOutChildrenNotRelevantChange -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetMovedBlankedOutChildrenNotRelevantChange">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckElementPositionAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChangeOfMovedBlankedOutChildren"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetOpenCommand -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetOpenCommand">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenBaseInterfaceAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Open"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetPaddingRelevantChange -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetPaddingRelevantChange">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckElementPositionAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfPadding"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetStoreCommand -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetStoreCommand">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Store"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetTextContetRelevantChange -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetTextContetRelevantChange">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckTextFormat"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenRemoveButtonAndTestScenario"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenRemoveTextAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfTextContent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetTypeCommand -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetTypeCommand">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenActionAndTestScenario"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddInputAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetVerifyCommand -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetVerifyCommand">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckAndTestScenario"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenValidateValueAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Verify"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetVerifyNotCommand -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetVerifyNotCommand">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenRemoveAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyNot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetWaitCommand -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTargetWaitCommand">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckPerformanceAndTestScenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Wait"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#isSourceOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#isSourceOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Source"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Trace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#isTargetOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#isTargetOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Trace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Action">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#FunctionalRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Add -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Add">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#NonFunctionalRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AddButton -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AddButton">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Add"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AddInput -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AddInput">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Add"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AddPrompt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AddPrompt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Add"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AddSelection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AddSelection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AddText -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AddText">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Add"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AnswerOnNextPrompt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AnswerOnNextPrompt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Artifact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Artifact">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Assert -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Assert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertAlert -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertAlert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Assert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertChecked -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertChecked">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Assert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertConfirmation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertConfirmation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Assert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertEditable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertEditable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Assert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertElement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Assert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertElementNotPresent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertElementNotPresent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertElementPresent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertElementPresent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertNot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertNot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Assert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertNotChecked -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertNotChecked">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertNot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertNotEditable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertNotEditable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertNot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertNotSelectedValue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertNotSelectedValue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertNot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertNotText -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertNotText">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertNot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertPrompt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertPrompt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Assert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertSelected -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertSelected">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Assert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertSelectedLabel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertSelectedLabel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertSelected"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertSelectedValue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertSelectedValue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertSelected"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertText -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertText">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Assert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertTitle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertTitle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Assert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertValue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertValue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Assert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#BaseInterface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#BaseInterface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#FunctionalRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Check -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Check">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#NonFunctionalRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElementColor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElementColor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElementPosition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElementPosition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElementSize -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElementSize">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElementStyle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElementStyle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckPerformance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckPerformance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#NonFunctionalRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckText -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckText">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#NonFunctionalRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFont -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFont">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckText"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFontSize -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFontSize">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFont"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFontStyle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFontStyle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFont"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFontWeight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFontWeight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFont"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFormat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFormat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckText"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFormatForDate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFormatForDate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFormat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFormatForNumber -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFormatForNumber">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFormat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Choose -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Choose">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ChooseCancel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ChooseCancel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Choose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ChooseCancelOnNextConfirmation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ChooseCancelOnNextConfirmation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ChooseCancel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ChooseCancelOnNextPrompt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ChooseCancelOnNextPrompt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ChooseCancel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ChooseOk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ChooseOk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Choose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ChooseOkOnNextConfirmation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ChooseOkOnNextConfirmation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ChooseOk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ClickAt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ClickAt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Close -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Close">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Debugger -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Debugger">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Do -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Do">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Double -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Double">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#DoubleClick -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#DoubleClick">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Double"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#DoubleClickAt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#DoubleClickAt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#DoubleClick"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#DragAndDropToObject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#DragAndDropToObject">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Echo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Echo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#EditContent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#EditContent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Else -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Else">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ElseIf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ElseIf">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#End -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#End">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Execute -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Execute">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ExecuteAsyncScript -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ExecuteAsyncScript">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Execute"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ExecuteScript -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ExecuteScript">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Execute"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ForEach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ForEach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#FunctionalRequirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#FunctionalRequirement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Requirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#If -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#If">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#InsertData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#InsertData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowChange -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowChange">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TestScenario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChange -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChange">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowChange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChangeOfDifferentBorderRadius -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChangeOfDifferentBorderRadius">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChange"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChangeOfDifferentColor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChangeOfDifferentColor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChange"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChangeOfLoginDate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChangeOfLoginDate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChangeOfMovedBlankedOutChildren -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChangeOfMovedBlankedOutChildren">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChange"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChangeOfNoise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChangeOfNoise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChange -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChange">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowChange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfElementPossition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfElementPossition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChange"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfFont -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfFont">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfFontSize -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfFontSize">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfFont"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfFontStyle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfFontStyle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfFont"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfFontWeight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfFontWeight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfFont"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfPadding -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfPadding">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChange"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfTextContent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfTextContent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChange"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfTextContentInTransactionalDates -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfTextContentInTransactionalDates">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfTextContent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Mouse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Mouse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseDown -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseDown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Mouse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseDownAt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseDownAt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseDown"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseMove -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseMove">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Mouse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseMoveAt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseMoveAt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseMove"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseOut -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseOut">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Mouse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseOver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseOver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Mouse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseUp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseUp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Mouse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseUpMoveAt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseUpMoveAt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseUp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#NonFunctionalRequirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#NonFunctionalRequirement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Requirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Pause -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Pause">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Remove -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Remove">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#NonFunctionalRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#RemoveButton -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#RemoveButton">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Remove"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#RemoveInput -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#RemoveInput">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Remove"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#RemovePrompt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#RemovePrompt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Remove"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#RemoveSelection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#RemoveSelection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#RemoveText -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#RemoveText">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Remove"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#RepeatIf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#RepeatIf">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Requirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Requirement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Source"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Run -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Run">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#RunScript -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#RunScript">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Run"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Select -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Select">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SelectFrame -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SelectFrame">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Select"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SelectWindow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SelectWindow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Select"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TestScenario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Send -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Send">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SendData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SendData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SendKeys -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SendKeys">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Send"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Set -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Set">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SetSpeed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SetSpeed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Set"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SetWindowSize -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SetWindowSize">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Set"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Source -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Source">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Artifact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Store -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Store">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#StoreAttribute -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#StoreAttribute">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Store"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#StoreJSON -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#StoreJSON">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Store"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#StoreText -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#StoreText">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Store"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#StoreTitle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#StoreTitle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Store"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#StoreValue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#StoreValue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Store"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#StoreWindowHandle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#StoreWindowHandle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Store"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#StoreXpathCount -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#StoreXpathCount">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Store"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Submit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Submit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Artifact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TestScenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TestScenario"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Times -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Times">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Trace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Trace">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Source"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenActionAndTestScenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenActionAndTestScenario">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Type"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Action"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Trace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddAndTestScenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddAndTestScenario">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfElementPossition"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Mouse"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Add"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Trace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddButtonAndTestScenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddButtonAndTestScenario">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AddButton"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfElementPossition"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddAndTestScenario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddInputAndTestScenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddInputAndTestScenario">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AddInput"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Type"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddAndTestScenario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddTextAndTestScenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddTextAndTestScenario">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AddText"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfElementPossition"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenAddAndTestScenario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenBaseInterfaceAndTestScenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenBaseInterfaceAndTestScenario">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#BaseInterface"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Open"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Trace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckAndTestScenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckAndTestScenario">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElement"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFont"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Assert"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Execute"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Store"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Verify"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Trace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckElementColorAndTestScenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckElementColorAndTestScenario">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElementColor"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChangeOfDifferentColor"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckAndTestScenario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckElementPositionAndTestScenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckElementPositionAndTestScenario">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChangeOfMovedBlankedOutChildren"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfElementPossition"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfPadding"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElementPosition"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckAndTestScenario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckElementStyleAndTestScenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckElementStyleAndTestScenario">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElementStyle"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChangeOfDifferentBorderRadius"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckAndTestScenario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckPerformanceAndTestScenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckPerformanceAndTestScenario">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckPerformance"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Wait"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Trace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckTextFormat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckTextFormat">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFormat"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfTextContent"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenCheckAndTestScenario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenRemoveAndTestScenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenRemoveAndTestScenario">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AssertNot"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfElementPossition"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyNot"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Remove"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Trace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenRemoveButtonAndTestScenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenRemoveButtonAndTestScenario">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#RemoveButton"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfTextContent"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenRemoveAndTestScenario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenRemoveTextAndTestScenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenRemoveTextAndTestScenario">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#RemoveText"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfTextContent"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenRemoveAndTestScenario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenSendDataAndTestScenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenSendDataAndTestScenario">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SendData"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Mouse"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenActionAndTestScenario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenValidateValueAndTestScenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#TraceBetweenValidateValueAndTestScenario">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Assert"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasTarget"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Verify"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#hasSourceFunctionalRequirementValidateValue"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ValidateValue"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Trace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Uncheck -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Uncheck">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ValidateValue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ValidateValue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#FunctionalRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VeriftyNotChecked -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VeriftyNotChecked">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyNot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Verify -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Verify">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyChecked -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyChecked">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Verify"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyEditable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyEditable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Verify"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyElement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Verify"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyElementNotPresent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyElementNotPresent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyElementPresent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyElementPresent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyNot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyNot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Verify"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyNotEditable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyNotEditable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyNot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyNotSelctedValue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyNotSelctedValue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyNot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyNotText -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyNotText">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyNot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifySelected -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifySelected">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Verify"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifySelectedLabel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifySelectedLabel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifySelected"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifySelectedValue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifySelectedValue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifySelected"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyText -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyText">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Verify"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyTitle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyTitle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Verify"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyValue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#VerifyValue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Verify"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Wait -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Wait">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Target"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Wait"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElementEditable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElementEditable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElementNot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElementNot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElementNotEditable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElementNotEditable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElementNot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElementNotPresent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElementNotPresent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElementNot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElementNotVisible -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElementNotVisible">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElementNot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElementPresent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElementPresent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElementVisible -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElementVisible">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WaitForElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Webdriver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Webdriver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WebdriverAnswerOnVisiblePrompt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WebdriverAnswerOnVisiblePrompt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Webdriver"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WebdriverChoose -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WebdriverChoose">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Webdriver"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WebdriverChooseCancelOnVisibleConfirmation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WebdriverChooseCancelOnVisibleConfirmation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WebdriverChoose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WebdriverChooseCancelOnVisiblePrompt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WebdriverChooseCancelOnVisiblePrompt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WebdriverChoose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WebdriverChooseOkOnVisibleConfirmation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WebdriverChooseOkOnVisibleConfirmation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#WebdriverChoose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#While -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#While">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SeleniumCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C1-LogicFlow_your_motorcycle_font_size_change -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C1-LogicFlow_your_motorcycle_font_size_change">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfFontSize"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C2-LogicFlow_your_premium_font_size_change -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C2-LogicFlow_your_premium_font_size_change">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfFontSize"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C3-LogicFlow_your_personal_information_font_size_change -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C3-LogicFlow_your_personal_information_font_size_change">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfFontSize"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C4-LogicFlow_your_insurance_font_size_change -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C4-LogicFlow_your_insurance_font_size_change">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfFontSize"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C5-LogicFlow_first_registration_field_border_radius_change -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C5-LogicFlow_first_registration_field_border_radius_change">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChangeOfDifferentBorderRadius"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C6-LogicFlow_first_registration_field_border_color_change -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C6-LogicFlow_first_registration_field_border_color_change">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowNotRelevantChangeOfDifferentColor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C7-LogicFlow_first_registration_weight_change -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C7-LogicFlow_first_registration_weight_change">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfFontWeight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C8-LogicFlow_first_registration_information_button_position_change -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C8-LogicFlow_first_registration_information_button_position_change">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfElementPossition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C9-LogicFlow_what_motorcycle_do_you_want_to_insure_div_children_position_change -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C9-LogicFlow_what_motorcycle_do_you_want_to_insure_div_children_position_change">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#LogicFlowRelevantChangeOfElementPossition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R1-1_Open_the_Premium_Calculator_Interface -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R1-1_Open_the_Premium_Calculator_Interface">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#BaseInterface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R2-1_Add_text_description_to_first_registration_field -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R2-1_Add_text_description_to_first_registration_field">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AddText"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R2-2_Add_text_description_to_find_your_vehicle_field -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R2-2_Add_text_description_to_find_your_vehicle_field">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AddText"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R2-3_Add_text_description_to_value_of_accessories_in_CHF_field -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R2-3_Add_text_description_to_value_of_accessories_in_CHF_field">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#AddText"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-10_Provide_most_frequent_rider_date_of_birth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-10_Provide_most_frequent_rider_date_of_birth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#InsertData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-11_Provide_most_frequent_rider_age_classification -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-11_Provide_most_frequent_rider_age_classification">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#InsertData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-12_Provide_Zurich_Life_Insurance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-12_Provide_Zurich_Life_Insurance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#InsertData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-13_Provide_Surich_Motor_Vehicle_Insurance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-13_Provide_Surich_Motor_Vehicle_Insurance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#InsertData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-1_Provide_first_registration -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-1_Provide_first_registration">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#InsertData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-2_Provide_vehicle_reference -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-2_Provide_vehicle_reference">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#InsertData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-3_Provide_value_of_accessories -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-3_Provide_value_of_accessories">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#InsertData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-4_Provide_Insurance_start_date -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-4_Provide_Insurance_start_date">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#InsertData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-5_Provide_leasing_contract -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-5_Provide_leasing_contract">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#InsertData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-6_Provide_main_use_of_motorcycle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-6_Provide_main_use_of_motorcycle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#InsertData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-7_Provide_most_frequent_rider_title -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-7_Provide_most_frequent_rider_title">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#InsertData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-8_Provide_most_frequent_rider_nationality -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-8_Provide_most_frequent_rider_nationality">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#InsertData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-9_Provide_most_frequent_rider_zip_code -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R3-9_Provide_most_frequent_rider_zip_code">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#InsertData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R4-1_Increase_your_motorcycle_font_size -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R4-1_Increase_your_motorcycle_font_size">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFontSize"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R4-2_Increase_your_premium_font_size -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R4-2_Increase_your_premium_font_size">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFontSize"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R4-3_Increase_your_personal_information_font_size -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R4-3_Increase_your_personal_information_font_size">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFontSize"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R4-4_Increase_your_insurance_font_size -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R4-4_Increase_your_insurance_font_size">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFontSize"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R5-1_Change_first_registration_font_weight_to_bold -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R5-1_Change_first_registration_font_weight_to_bold">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFontWeight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R5-2_Change_what_motorcycle_do_you_want_to_insure_font_weight_to_regular -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R5-2_Change_what_motorcycle_do_you_want_to_insure_font_weight_to_regular">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckTextFontWeight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R6-1_Change_first_registration_text_fiel_radius -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R6-1_Change_first_registration_text_fiel_radius">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElementStyle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R7-1_Change_first_registration_text_field_border_color -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#R7-1_Change_first_registration_text_field_border_color">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#CheckElementColor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#1-Open -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#1-Open">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Open"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#2-Scroll"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#1-Trace -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#1-Trace">
+        <hasTarget rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#1-Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#10-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#10-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#11-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#11-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#11-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#12-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#12-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#12-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#13-Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#13-Type -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#13-Type">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Type"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#14-MouseOver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#14-MouseOver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#14-MouseOver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseOver"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#15-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#15-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#15-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#16-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#16-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#16-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#17-Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#17-Type -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#17-Type">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Type"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#18-SendKeys"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#18-SendKeys -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#18-SendKeys">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SendKeys"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#19-MouseOver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#19-MouseOver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#19-MouseOver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseOver"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#20-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#2-Scroll -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#2-Scroll">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ExecuteScript"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#3-Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#2-Trace -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#2-Trace">
+        <hasTarget rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#10-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#20-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#20-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#21-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#21-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#21-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#22-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#22-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#22-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#23-MouseOver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#23-MouseOver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#23-MouseOver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseOver"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#24-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#24-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#24-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#25-MouseOver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#25-MouseOver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#25-MouseOver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseOver"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#26-Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#26-Type -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#26-Type">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Type"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#27-SendKeys"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#27-SendKeys -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#27-SendKeys">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SendKeys"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#28-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#28-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#28-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#29-Scroll"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#29-Scroll -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#29-Scroll">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ExecuteScript"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#30-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#3-Open -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#3-Open">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Open"/>
+        <HasChange rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C1-LogicFlow_your_motorcycle_font_size_change"/>
+        <HasChange rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C2-LogicFlow_your_premium_font_size_change"/>
+        <HasChange rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C3-LogicFlow_your_personal_information_font_size_change"/>
+        <HasChange rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C4-LogicFlow_your_insurance_font_size_change"/>
+        <HasChange rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C5-LogicFlow_first_registration_field_border_radius_change"/>
+        <HasChange rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C6-LogicFlow_first_registration_field_border_color_change"/>
+        <HasChange rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C7-LogicFlow_first_registration_weight_change"/>
+        <HasChange rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C8-LogicFlow_first_registration_information_button_position_change"/>
+        <HasChange rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#C9-LogicFlow_what_motorcycle_do_you_want_to_insure_div_children_position_change"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#4-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#30-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#30-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#31-MouseOver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#31-MouseOver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#31-MouseOver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseOver"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#32-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#32-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#32-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#33-MouseOver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#33-MouseOver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#33-MouseOver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseOver"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#34-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#34-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#34-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#35-MouseOver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#35-MouseOver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#35-MouseOver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseOver"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#36-SetWindowSize"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#36-SetWindowSize -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#36-SetWindowSize">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SetWindowSize"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#37-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#37-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#37-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#38-MouseOver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#38-MouseOver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#38-MouseOver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseOver"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#39-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#39-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#39-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#40-MouseOver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#4-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#4-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#5-MouseOver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#40-MouseOver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#40-MouseOver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseOver"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#41-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#41-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#41-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#42-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#42-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#42-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#43-MouseOver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#43-MouseOver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#43-MouseOver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseOver"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#44-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#44-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#44-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#45-MouseOver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#45-MouseOver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#45-MouseOver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseOver"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#46-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#46-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#46-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#47-MouseOver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#47-MouseOver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#47-MouseOver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseOver"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#48-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#48-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#48-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#49-Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#49-Type -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#49-Type">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Type"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#50-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#5-MouseOver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#5-MouseOver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseOver"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#6-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#50-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#50-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#51-MouseOver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#51-MouseOver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#51-MouseOver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseOver"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#52-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#52-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#52-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#53-Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#53-Type -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#53-Type">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Type"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#54-SendKeys"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#54-SendKeys -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#54-SendKeys">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SendKeys"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#55-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#55-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#55-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#56-MouseOver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#56-MouseOver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#56-MouseOver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseOver"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#57-Scroll"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#57-Scroll -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#57-Scroll">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ExecuteScript"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#58-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#58-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#58-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#59-MouseOver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#59-MouseOver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#59-MouseOver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#MouseDown"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#60-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#6-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#6-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#7-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#60-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#60-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#61-Click"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#61-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#61-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#62-Scroll"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#62-Scroll -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#62-Scroll">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#ExecuteScript"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#63-Close"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#63-Close -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#63-Close">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Close"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#7-Click -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#7-Click">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Click"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#8-Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#8-Type -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#8-Type">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#Type"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#9-SendKeys"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#9-SendKeys -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#9-SendKeys">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#SendKeys"/>
+        <HasNextCommand rdf:resource="http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#10-Click"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
