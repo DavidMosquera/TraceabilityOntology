@@ -11,6 +11,11 @@ TraceabilityOntology repository comprises all the files and source code for auto
 # Additional materials
 Since our approach is being reviewed by the CAiSE2022 jurors, in this repository we will avoid directly including paper's textual information, avoiding self-plagiarism. However, we will refer to the section, tables, and guidelines proposed in the paper in the following sections by using the manuscript numbering-i.e., Guideline 1, Guideline 2, Section 4.5, Table 1, etc. For more details, please refer to the document directly.  
 
+## Traceability matrix in Table 2
+We exemplify a traceability matrix in Section 4.3 of the paper to implement Guideline 6. Due to space limitations, we only exemplify artifacts related to non-functional requirements. Therefore, we add to this repository the traceability matrix with some functional requirements associated with it as follows:
+![](https://github.com/DavidMosquera/TraceabilityOntology/blob/main/images/matrix.png)
+
+
 ## Running example result from applying Guidelines 9 and 10
 We exemplify with the running example at LogicFlow AG the properties related to traceability, instantiating what is mentioned in Sections 4.5 and 4.6 of the article (Guidelines 9 and 10). Due to space limitations, we do not include the graphical version of the example. Therefore, we include it in the repository as follows: 
 ![](https://github.com/DavidMosquera/TraceabilityOntology/blob/main/images/AddG.png)
