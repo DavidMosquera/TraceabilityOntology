@@ -6,6 +6,11 @@ No inputs
 **/ 
 
 /** We query grouping by targets**/
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ontotrace: <http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#>
 SELECT ?target (count(?trace) as ?count) 
 WHERE{
 	?class rdfs:subClassOf* ontotrace:Target.
