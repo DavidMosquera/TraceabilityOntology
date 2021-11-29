@@ -14,3 +14,7 @@ Since our approach is being reviewed by the CAiSE2022 jurors, in this repository
 ## Running example result from applying Guidelines 9 and 10
 We exemplify with the running example at LogicFlow AG the properties related to traceability, instantiating what is mentioned in Sections 4.5 and 4.6 of the article (Guidelines 9 and 10). Due to space limitations, we do not include the graphical version of the example. Therefore, we include it in the repository as follows: 
 ![](https://github.com/DavidMosquera/TraceabilityOntology/blob/main/images/AddG.png)
+
+## Complete prototype example with source and target artifact
+We show how the prototype looks like in the paper's Section 5. Due to space limitations, we just show the source artifact side of the automatic reasoning, excluding the target artifact side. Therefore, we include the full imagen in the repository as follows: 
+![](https://github.com/DavidMosquera/TraceabilityOntology/blob/main/images/Ontology101-v2.0-Prototype.drawio.png)
