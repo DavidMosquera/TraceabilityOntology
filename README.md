@@ -17,4 +17,4 @@ We exemplify with the running example at LogicFlow AG the properties related to 
 
 ## Complete prototype example with source and target artifact
 We show how the prototype looks like in the paper's Section 5. Due to space limitations, we just show the source artifact side of the automatic reasoning, excluding the target artifact side. Therefore, we include the full imagen in the repository as follows: 
-![](https://github.com/DavidMosquera/TraceabilityOntology/blob/main/images/Ontology101-v2.0-Prototype.drawio.png)
+![](https://github.com/DavidMosquera/TraceabilityOntology/blob/main/images/Ontology101-v2.2-Prototype.drawio.png)
