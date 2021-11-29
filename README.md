@@ -8,5 +8,5 @@ TraceabilityOntology repository comprises all the files and source code for auto
 * SPARQL queries in plain text (```SPARQL-Queries```)
 * Prototype source code, containing the running example of LogicFlow AG (```LogicFlow-InnoCheck-v3```)
 
-#Complementing some paper information by using diagrams
+# Complementing some paper information by using diagrams
 Since our approach is being reviewed by the CAiSE2022 jurors, in this repository we will avoid directly including paper's textual information, avoiding self-plagiarism. However, we will refer to the section, tables, and guidelines proposed in the paper in the following sections by using the manuscript numbering-i.e., Guideline 1, Guideline 2, Section 4.5, Table 1, etc. For more details, please refer to the document directly.  
