@@ -1,0 +1,18 @@
+/** This SPARQL query aims for answering the question "Is there any untraced target artifact?" 
+
+Inputs: 
+No inputs
+
+**/ 
+
+/** We query grouping by targets**/
+SELECT ?target (count(?trace) as ?count) 
+WHERE{
+	?class rdfs:subClassOf* ontotrace:Target.
+	?target a ?class.
+	OPTIONAL {
+		?trace a ontotrace:Trace.
+		?trace ontotrace:hasTarget ?target.
+		?trace ontotrace:hasSource ?source.
+	}
+}GROUP BY ?target HAVING (?count = 0)

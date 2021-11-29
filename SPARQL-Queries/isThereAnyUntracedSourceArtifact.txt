@@ -1,0 +1,23 @@
+/** This SPARQL query aims for answering the question "Is there any untraced source artifact?" 
+
+Inputs: 
+No inputs
+
+**/ 
+
+/** We query groubing by sources **/
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ontotrace: <http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#>
+SELECT ?source  (count(?trace) as ?count) 
+WHERE{
+	?class rdfs:subClassOf* ontotrace:Source.
+	?source a ?class.
+	OPTIONAL {
+		?trace a ontotrace:Trace.
+		?trace ontotrace:hasSource ?source.
+		?trace ontotrace:hasTarget ?target.
+	}
+}GROUP BY ?source HAVING (count(?trace) = 0)

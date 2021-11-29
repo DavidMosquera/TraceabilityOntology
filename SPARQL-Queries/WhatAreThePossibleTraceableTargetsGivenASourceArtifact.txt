@@ -1,0 +1,68 @@
+/** This SPARQL query aims for answering the question "Given a specific source artifact, which are the suggested target artifacts that may be trace to it?" 
+
+Inputs: 
+- a possible trace name $tracename$, e.g., trace102
+- the given source artifact $source$, e.g., Requirement1
+
+**/ 
+
+/** First we insert a possible trace by using the following SPARQL statement **/
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ontotrace: <http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#>
+INSERT DATA {
+	ontotrace:$tracename$ ontotrace:hasSource ontotrace:$source$
+}
+
+/** Then, we query the possible sources by using the $tracename$ **/
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ontotrace: <http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#>
+SELECT ?traceType ?traceTarget ?targetClass ?possibleTarget
+WHERE {
+	?traceType ^a ontotrace:$tracename$.
+	?traceType rdfs:subClassOf ontotrace:Trace.
+	?traceTarget rdfs:domain ?traceType.
+	?traceTarget rdfs:subPropertyOf ontotrace:hasTarget.
+	?traceTarget rdfs:range ?targetClass.
+	?targetClass rdfs:subClassOf ontotrace:Target.
+	OPTIONAL {
+		?possibleTarget a ?targetClass.
+	}
+	filter (?traceTarget != owl:bottomObjectProperty && ?targetClass != ontotrace:Target)
+}
+/** Here is an example, having $tracename$ = trace102 and $source$ = Requirement1 **/ 
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ontotrace: <http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#>
+INSERT DATA {
+	ontotrace:trace102 ontotrace:hasSource ontotrace:Requirement1
+}
+
+///////////////
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ontotrace: <http://www.semanticweb.org/mosq/ontologies/2021/10/traceOntology1#>
+SELECT ?traceType ?traceTarget ?targetClass ?possibleTarget
+WHERE {
+	?traceType ^a ontotrace:trace102.
+	?traceType rdfs:subClassOf ontotrace:Trace.
+	?traceTarget rdfs:domain ?traceType.
+	?traceTarget rdfs:subPropertyOf ontotrace:hasTarget.
+	?traceTarget rdfs:range ?targetClass.
+	?targetClass rdfs:subClassOf ontotrace:Target.
+	OPTIONAL {
+		?possibleTarget a ?targetClass.
+	}
+	filter (?traceTarget != owl:bottomObjectProperty && ?targetClass != ontotrace:Target)
+}

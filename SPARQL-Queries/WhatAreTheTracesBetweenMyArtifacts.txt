@@ -1,0 +1,14 @@
+/** This SPARQL query aims for answering the question "What are the traces between my artifacts? " 
+
+Inputs: 
+No inputs
+
+**/ 
+
+/** We query all the traces**/
+SELECT ?source ?trace ?target
+WHERE {
+	?trace a ontotrace:Trace. 
+	?trace ontotrace:hasSource ?source.
+	?trace ontotrace:hasTarget ?target.
+}
